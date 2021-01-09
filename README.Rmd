@@ -1,0 +1,34 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# committee_assigment
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of committee_assigment is to expediate the creation of *balanced* committee assignments given a handful of *constaints*.
+
+## Objectives & Constraints
+
+The main objective is to create balanced committee assignments that represent the 
+overall population as whole.  This means controlling for certain variables, such as 
+gender, occupation, region, etc.
+
+The largest constraint are...
+
+
+## Session Info
+```{r}
+sessionInfo()
+```
+
