@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of committee_assigment is to expediate the creation of *balanced* committee assignments given a handful of *constaints*.
+The goal of committee_assigment is to expediate the creation of *balanced* committee assignments given a handful of *constraints*.
 
 ## Objectives & Constraints
 
@@ -24,7 +24,11 @@ The main objective is to create balanced committee assignments that represent th
 overall population as whole.  This means controlling for certain variables, such as 
 gender, occupation, region, etc.
 
-The largest constraint are...
+The largest constraint are:
+
+* Gender (ensure balanced gender representation)
+* Job (ensure each Job role is equally represented)
+* Region (ensure representation from each region, try to balance it)
 
 
 ## Session Info
