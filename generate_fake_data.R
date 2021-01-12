@@ -21,3 +21,19 @@ fake.data <- tibble::tibble(
   Already_Assinged = 0
 )
 
+
+# Fake Data Summary -------------------------------------------------------
+
+fake.data %>% 
+  dplyr::count(Gender)
+
+fake.data %>% 
+  dplyr::count(Job)
+
+fake.data %>% 
+  dplyr::count(Region)
+
+
+fake.data %>% 
+  dplyr::group_by(Gender, Job) %>% 
+  dplyr::count()

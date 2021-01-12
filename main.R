@@ -13,12 +13,11 @@ gasolution <- GA::ga(
   new.members=members.needed, 
   lower = 1,
   upper = (nrow(fake.data)),
-  maxiter = 1000,
+  maxiter = 5000,
   pmutation = 0.25,
-  elitism = 0.1,
-  popSize = 200
+  elitism = 0.15,
+  run = 750
 )
-
 
 
 
@@ -34,3 +33,5 @@ fake.data[gasolution@solution[1:members.needed],] %>%
 
 fake.data[gasolution@solution[1:members.needed],] %>% 
   count(Region)
+
+plot(gasolution)

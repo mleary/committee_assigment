@@ -6,7 +6,7 @@ female_score <- function(vec.gender, goal=0.5){
   denom <- length(vec.gender)
   females <- length(vec.gender[vec.gender ==  "F"]) 
   female.percent <- (females / denom)
-  score <- abs(female.percent  - goal)^2  
+  score <- abs(female.percent  - goal)^2
   return(score)
 }
 
@@ -35,7 +35,6 @@ region_score <- function(region.vector, goal = 0.09){
 
 # Aggregate Scoring Function ----------------------------------------------
 
-
 committee_score <- function(selected, dataset, new.members){
   
   dataset <- dataset[selected,][1:new.members,] # first order by deletion then limit to new
@@ -44,6 +43,10 @@ committee_score <- function(selected, dataset, new.members){
   region.score <- dataset$Region %>% region_score()
   return(female.score + job.score + region.score)
 }
+
+
+
+# Fitness function --------------------------------------------------------
 
 fitnessfunc <- function(selected, ...) {
   1 / committee_score(selected, ...)
