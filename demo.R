@@ -1,8 +1,19 @@
+# author: matt leary
+# intent: demo of a optimization method to create committee assignments
+
+
+# checkpoint setup --------------------------------------------------------
+
+source(here::here("utils/project_setup.R"))
+
+# Libraries and source add'l scripts --------------------------------------
+
 library(dplyr)
 library(GA)
 
-source(here::here("generate_fake_data.R"))
-source(here::here("helpers.R"))
+
+source(here::here("utils/generate_fake_data.R"))
+source(here::here("utils/ga_helpers.R"))
 
 
 # One Committee  ----------------------------------------------------------

@@ -13,10 +13,11 @@ knitr::opts_chunk$set(
 
 # committee_assigment
 
-<!-- badges: start -->
-<!-- badges: end -->
 
-The goal of committee_assigment is to expediate the creation of *balanced* committee assignments given a handful of *constraints*.
+The goal of committee_assigment is to expedite the creation of *balanced* committee assignments given a handful of *constraints*.
+
+This is achieved by using the `{GA}` package to run a genetic algorithim and optimize
+committee assignments.
 
 ## Objectives & Constraints
 
@@ -27,12 +28,28 @@ gender, occupation, region, etc.
 The largest constraint are:
 
 * Gender (ensure balanced gender representation)
+  * Goal is 50% Female /  50% Male (this was a basic demo that ignores other gender identities (i.e. non-binary))
 * Job (ensure each Job role is equally represented)
+  * Goal is 25% each category
+  * Large penalty applied if any Job is less than 15% of committee
 * Region (ensure representation from each region, try to balance it)
+  * Goal is 9% per region
+  * Large penalty applied if any region is not represented at all
 
+## Using this repo
+
+This project was setup with the `{checkpoint}`  for package versioning.  It's not perfect
+but it works.  You can activate the checkpoint folder by running the `utils\project_setup.R` file.
+More details on project development environment is listed belowin the `Session Info` section.
+
+The `utils\ga_helpers.R` file has all the functions used in genetic algorithim.
+
+The `utils\generate_fake_data.R` file is a temp file purely for development.  It, as
+the name suggests, generates fake data to demo how the process **could** work.
 
 ## Session Info
 ```{r}
 sessionInfo()
 ```
+
 

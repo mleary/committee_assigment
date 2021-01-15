@@ -15,8 +15,9 @@ job_score <- function(job.vector ,goal =0.25){
   denom <- length(job.vector)
   perc.vec <- table(job.vector) / denom
   score <- (perc.vec - goal) %>% abs() %>% sum()
+  score <- score * 2
   if(sum((perc.vec < 0.15)) + sum((perc.vec > 0.42)) > 0){
-    score <- 10
+    score <- 50
   }
   return(score)
 }
@@ -75,9 +76,4 @@ fitnessfunc_multiple <- function(selected, ...){
   1 / multiple_committee_score(selected, ...)
   
 }
-
-# Multiple Committees ------------------------------------------------------
-
-
-
 
